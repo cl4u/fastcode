@@ -1,23 +1,33 @@
 {
   "name": "js-fastcode",
-  "version": "1.0.9",
-  "description": "Encapsulate some methods for rapid development",
-  "main": "index.js",
+  "private": false,
+  "version": "2.0.6",
+  "type": "module",
+  "keywords": [
+    "date",
+    "math",
+    "validate",
+    "utils",
+    "localStorage",
+    "sessionStorage"
+  ],
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/fastcode.umd.cjs",
+  "module": "./dist/fastcode.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/fastcode.js",
+    "require": "./dist/fastcode.umd.cjs"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://192.168.100.99:1302/renke/easycode.git"
-  },
-  "author": "rk",
-  "license": "MIT",
-  "dependencies": {
-    "eslint": "^8.35.0"
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.0",
-    "@babel/core": "^7.21.0",
-    "@babel/preset-env": "^7.20.2"
+    "vite": "^5.2.10"
   }
 }
